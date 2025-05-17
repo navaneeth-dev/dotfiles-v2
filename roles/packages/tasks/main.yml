@@ -2,12 +2,14 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - zsh
       - git
       - tmux
       - bat
       - unzip
       - ripgrep
       - wget
+      - zoxide
     state: present
 
 # Update homebrew and upgrade all packages

@@ -19,21 +19,17 @@ zinit snippet OMZP::git
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 
+# Load tools to path
 eval "$(starship init zsh)"
-
-zstyle ':completion:*:*:git:*' script /usr/share/bash-completion/bash_completion
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Tool paths
 export EDITOR=nvim
 export PATH=~/.local/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.fzf:$PATH
-# export PATH=/opt/android-studio/bin:$PATH
-# export PATH=/home/rize/.config/composer/vendor/bin:$PATH
 
 # SSH Keys setup
-# export GPG_TTY=$(tty)
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 export SSH_AUTH_SOCK=/home/rize/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
 
 zinit light zdharma-continuum/history-search-multi-word
@@ -92,9 +88,6 @@ zinit cdreplay -q
 source <(helm completion zsh)
 source <(kubectl completion zsh)
 
-# Shell integrations
-# source "$HOME/.cargo/env"
-# source "$HOME/.fzf.zsh"
 eval "$(zoxide init zsh --cmd cd)"
 
 zinit cdreplay -q
@@ -102,4 +95,5 @@ zinit cdreplay -q
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+zstyle ':completion:*:*:git:*' script /usr/share/bash-completion/bash_completion
+
