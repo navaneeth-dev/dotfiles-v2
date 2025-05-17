@@ -1,8 +1,10 @@
 [user]
 	name = Navaneeth
 	email = 32010211+navaneeth-dev@users.noreply.github.com
-	signingkey = D0A974A2464340B4
 [commit]
 	gpgsign = true
 [tag]
 	gpgSign = true
+[gpg]
+	format = ssh
+
