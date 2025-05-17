@@ -1,0 +1,30 @@
+- name: Install packages
+  ansible.builtin.package:
+    name:
+      - git
+      - tmux
+      - bat
+      - unzip
+      - ripgrep
+      - wget
+    state: present
+
+# Update homebrew and upgrade all packages
+- become: false
+  community.general.homebrew:
+    update_homebrew: true
+    upgrade_all: true
+
+- become: false
+  community.general.homebrew:
+    name:
+      - kubectl
+    state: present
+
+- name: Install flatpaks
+  community.general.flatpak:
+    name:
+      - com.discordapp.Discord
+      - org.localsend.localsend_app
+      - org.mozilla.Thunderbird
+    state: present
