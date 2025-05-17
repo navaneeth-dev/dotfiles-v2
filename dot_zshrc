@@ -34,10 +34,7 @@ export PATH=~/.fzf:$PATH
 # SSH Keys setup
 # export GPG_TTY=$(tty)
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
-
-# Kubernetes
-# export KUBECONFIG=$HOME/.kube/ociconfig:$HOME/personal/homelab/k3sup/kubeconfig
-# export PATH=$HOME/.krew/bin:$PATH
+export SSH_AUTH_SOCK=/home/rize/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
 
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zdharma-continuum/fast-syntax-highlighting
