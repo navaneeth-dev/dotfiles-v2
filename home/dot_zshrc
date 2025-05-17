@@ -38,16 +38,16 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
 # Keybindings
-bindkey -e
+bindkey -v
 bindkey "^[[3~" delete-char
 
 function tmux_sessionizer() {
     tmux-sessionizer
 }
 
-function zvm_after_lazy_keybindings() {
+function zvm_after_init() {
     zvm_define_widget tmux_sessionizer
-    zvm_bindkey vicmd '^_' tmux_sessionizer
+    zvm_bindkey viins '^F' tmux_sessionizer
 }
 
 my-backward-delete-word() {
@@ -84,8 +84,7 @@ setopt hist_find_no_dups
 alias ls="exa --icons"
 
 # Load completions
-autoload -Uz compinit
-compinit
+zicompinit
 zinit cdreplay -q
 
 source <(helm completion zsh)
