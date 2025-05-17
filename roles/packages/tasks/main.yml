@@ -28,3 +28,9 @@
       - org.localsend.localsend_app
       - org.mozilla.Thunderbird
     state: present
+
+- name: Change user shell to zsh
+  become: false
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/bin/zsh
