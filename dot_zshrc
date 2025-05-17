@@ -1,0 +1,108 @@
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
+zinit ice lucid as"program" pick"bin/git-dsf"
+zinit load so-fancy/diff-so-fancy
+
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
+
+# Snippets
+zinit snippet OMZP::git
+zinit snippet OMZP::kubectl
+zinit snippet OMZP::kubectx
+
+eval "$(starship init zsh)"
+
+zstyle ':completion:*:*:git:*' script /usr/share/bash-completion/bash_completion
+
+# Tool paths
+export EDITOR=nvim
+export PATH=~/.local/bin:$PATH
+export PATH=~/go/bin:$PATH
+export PATH=~/.fzf:$PATH
+# export PATH=/opt/android-studio/bin:$PATH
+# export PATH=/home/rize/.config/composer/vendor/bin:$PATH
+
+# SSH Keys setup
+# export GPG_TTY=$(tty)
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
+# Kubernetes
+# export KUBECONFIG=$HOME/.kube/ociconfig:$HOME/personal/homelab/k3sup/kubeconfig
+# export PATH=$HOME/.krew/bin:$PATH
+
+zinit light zdharma-continuum/history-search-multi-word
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
+# Keybindings
+bindkey -e
+bindkey "^[[3~" delete-char
+
+function tmux_sessionizer() {
+    tmux-sessionizer
+}
+
+function zvm_after_lazy_keybindings() {
+    zvm_define_widget tmux_sessionizer
+    zvm_bindkey vicmd '^_' tmux_sessionizer
+}
+
+my-backward-delete-word() {
+    # Copy the global WORDCHARS variable to a local variable. That way any
+    # modifications are scoped to this function only
+    local WORDCHARS=$WORDCHARS
+    # Use bash string manipulation to remove `:` so our delete will stop at it
+    WORDCHARS="${WORDCHARS//:}"
+    # Use bash string manipulation to remove `/` so our delete will stop at it
+    WORDCHARS="${WORDCHARS//\/}"
+    # Use bash string manipulation to remove `.` so our delete will stop at it
+    WORDCHARS="${WORDCHARS//.}"
+    # zle <widget-name> will run an existing widget.
+    zle backward-delete-word
+}
+# `zle -N` will create a new widget that we can use on the command line
+zle -N my-backward-delete-word
+# bind this new widget to `ctrl+w`
+bindkey '^W' my-backward-delete-word
+
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Load completions
+autoload -Uz compinit
+compinit
+zinit cdreplay -q
+
+source <(helm completion zsh)
+source <(kubectl completion zsh)
+
+# Shell integrations
+# source "$HOME/.cargo/env"
+# source "$HOME/.fzf.zsh"
+eval "$(zoxide init zsh --cmd cd)"
+
+zinit cdreplay -q
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
