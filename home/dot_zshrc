@@ -80,6 +80,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# Alias
+alias ls="exa --icons"
+
 # Load completions
 autoload -Uz compinit
 compinit

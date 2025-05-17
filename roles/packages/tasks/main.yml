@@ -10,6 +10,7 @@
       - ripgrep
       - wget
       - zoxide
+      - exa
     state: present
 
 # Update homebrew and upgrade all packages
