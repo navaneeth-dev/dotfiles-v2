@@ -41,13 +41,8 @@ zinit light zsh-users/zsh-completions
 bindkey -v
 bindkey "^[[3~" delete-char
 
-function tmux_sessionizer() {
-    tmux-sessionizer
-}
-
 function zvm_after_init() {
-    zvm_define_widget tmux_sessionizer
-    zvm_bindkey viins '^F' tmux_sessionizer
+    bindkey -M viins -s '^F' "tmux-sessionizer^M"
 }
 
 my-backward-delete-word() {
