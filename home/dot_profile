@@ -1,0 +1,9 @@
+# Added by Toolbox App
+export PATH="$PATH:/home/rize/.local/share/JetBrains/Toolbox/scripts"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
