@@ -30,7 +30,7 @@ export PATH=~/go/bin:$PATH
 export PATH=~/.fzf:$PATH
 
 # SSH Keys setup
-export SSH_AUTH_SOCK=/home/rize/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+# export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zdharma-continuum/fast-syntax-highlighting

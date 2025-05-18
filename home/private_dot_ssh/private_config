@@ -1,0 +1,4 @@
+Host *
+    AddKeysToAgent yes
+    IdentityFIle ~/.ssh/new_primary_ed25519
+
