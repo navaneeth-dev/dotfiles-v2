@@ -11,6 +11,7 @@
       - wget
       - zoxide
       - exa
+      - rclone
     state: present
 
 # Update homebrew and upgrade all packages
