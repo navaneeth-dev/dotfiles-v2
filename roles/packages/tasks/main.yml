@@ -84,3 +84,10 @@
   environment:
     XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_uid }}"
 
+- name: Create dev directories
+  ansible.builtin.file:
+    path:
+    - "/home/{{ ansible_user_id }}/personal"
+    - "/home/{{ ansible_user_id }}/work"
+    state: directory
+    mode: '0755'
