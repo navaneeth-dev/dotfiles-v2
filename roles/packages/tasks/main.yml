@@ -26,6 +26,7 @@
       - mpv
       - wl-clipboard
       - btop
+      - syncthing
     state: present
 
 - name: Install yay using makepkg if it isn't installed already
@@ -74,12 +75,23 @@
     name: "{{ ansible_user_id }}"
     shell: /usr/bin/zsh
 
-- name: Start and enable ssh-agent for user
+- name: Start and enable systemd user services
   become: true
   become_user: "{{ ansible_user_id }}"
   ansible.builtin.systemd_service:
     state: started
     name: ssh-agent.service
+    enabled: true
+    scope: user
+  environment:
+    XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_uid }}"
+
+- name: Start and enable systemd user services
+  become: true
+  become_user: "{{ ansible_user_id }}"
+  ansible.builtin.systemd_service:
+    state: started
+    name: syncthing.service
     enabled: true
     scope: user
   environment:
