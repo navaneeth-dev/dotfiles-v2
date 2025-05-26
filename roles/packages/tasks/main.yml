@@ -64,6 +64,7 @@
       - com.stremio.Stremio
       - com.obsproject.Studio
       - org.sqlitebrowser.sqlitebrowser
+      - md.obsidian.Obsidian
     state: present
 
 - name: Change user shell to zsh
