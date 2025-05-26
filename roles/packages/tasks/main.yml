@@ -9,6 +9,7 @@
     name:
       - fzf
       - go-task
+      - restic
       - go
       - zsh
       - git
