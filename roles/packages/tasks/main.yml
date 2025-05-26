@@ -7,6 +7,7 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - fzf
       - go
       - zsh
       - git
@@ -18,6 +19,11 @@
       - zoxide
       - exa
       - rclone
+      - ttf-jetbrains-mono-nerd
+      - ttf-iosevkaterm-nerd
+      - mpv
+      - wl-clipboard
+      - btop
     state: present
 
 - name: Install yay using makepkg if it isn't installed already
@@ -32,6 +38,7 @@
     use: yay
     name:
       - google-chrome
+      - librewolf-bin
 
 - name: Update homebrew and upgrade all packages
   become: false
@@ -53,6 +60,8 @@
       - org.localsend.localsend_app
       - org.mozilla.Thunderbird
       - com.stremio.Stremio
+      - com.obsproject.Studio
+      - org.sqlitebrowser.sqlitebrowser
     state: present
 
 - name: Change user shell to zsh
