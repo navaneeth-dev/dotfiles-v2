@@ -52,6 +52,7 @@
       - com.discordapp.Discord
       - org.localsend.localsend_app
       - org.mozilla.Thunderbird
+      - com.stremio.Stremio
     state: present
 
 - name: Change user shell to zsh
