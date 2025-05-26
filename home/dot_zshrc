@@ -30,7 +30,7 @@ export PATH=~/go/bin:$PATH
 export PATH=~/.fzf:$PATH
 
 # SSH Keys setup
-# export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zdharma-continuum/fast-syntax-highlighting
