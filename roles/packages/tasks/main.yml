@@ -57,8 +57,19 @@
 
 - name: Change user shell to zsh
   become: true
-  vars:
-    user: "{{ ansible_user_id }}"
+  become_user: "{{ ansible_user_id }}"
   user:
-    name: "{{ user }}"
+    name: "{{ ansible_user_id }}"
     shell: /usr/bin/zsh
+
+- name: Start and enable ssh-agent for user
+  become: true
+  become_user: "{{ ansible_user_id }}"
+  ansible.builtin.systemd_service:
+    state: started
+    name: ssh-agent.service
+    enabled: true
+    scope: user
+  environment:
+    XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_uid }}"
+
