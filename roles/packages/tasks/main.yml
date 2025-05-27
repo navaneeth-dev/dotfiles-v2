@@ -9,6 +9,7 @@
     name:
       - fzf
       - go-task
+      - fuse2
       - restic
       - go
       - zsh
