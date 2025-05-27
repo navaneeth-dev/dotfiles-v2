@@ -28,6 +28,7 @@ export EDITOR=nvim
 export PATH=~/.local/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.fzf:$PATH
+export PATH=/home/rize/Android/Sdk/platform-tools:$PATH
 
 # SSH Keys setup
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
