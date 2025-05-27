@@ -67,6 +67,7 @@
       - com.obsproject.Studio
       - org.sqlitebrowser.sqlitebrowser
       - md.obsidian.Obsidian
+      - com.github.skylot.jadx
     state: present
 
 - name: Change user shell to zsh

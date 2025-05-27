@@ -6,5 +6,6 @@ pipx ensurepath
 sudo pipx ensurepath --global
 
 pipx install --include-deps ansible
+pipx install --include-deps frida-tools
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
