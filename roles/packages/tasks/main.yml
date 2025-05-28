@@ -69,6 +69,7 @@
       - md.obsidian.Obsidian
       - com.github.skylot.jadx
       - org.ghidra_sre.Ghidra
+      - org.telegram.desktop
     state: present
 
 - name: Change user shell to zsh
