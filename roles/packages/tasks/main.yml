@@ -28,6 +28,9 @@
       - wl-clipboard
       - btop
       - syncthing
+      - libvirt
+      # - dnsmasq
+      - virt-manager
     state: present
 
 - name: Install yay using makepkg if it isn't installed already
@@ -60,7 +63,7 @@
 - name: Install flatpaks
   community.general.flatpak:
     name:
-      - com.discordapp.Discord
+      - dev.vencord.Vesktop
       - org.localsend.localsend_app
       - org.mozilla.Thunderbird
       - com.stremio.Stremio
