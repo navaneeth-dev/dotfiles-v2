@@ -32,7 +32,7 @@
       - dnsmasq
       - openbsd-netcat
       - virt-manager
-      - qemu-base
+      - qemu-full
       - dmidecode
     state: present
 
@@ -44,11 +44,13 @@
   become: false
 
 - name: Install packages using AUR
+  become: false
   kewlfft.aur.aur:
     use: yay
     name:
       - google-chrome
       - librewolf-bin
+      - infisical-bin
 
 - name: Update homebrew and upgrade all packages
   become: false
@@ -116,10 +118,10 @@
     scope: system
 
 - name: Create dev directories
+  loop:
+  - "/home/{{ ansible_user_id }}/personal"
+  - "/home/{{ ansible_user_id }}/work"
+  - "/home/{{ ansible_user_id }}/Re"
   ansible.builtin.file:
-    path:
-    - "/home/{{ ansible_user_id }}/personal"
-    - "/home/{{ ansible_user_id }}/work"
-    - "/home/{{ ansible_user_id }}/Re"
+    path: "{{ item }}"
     state: directory
-    mode: '0755'
