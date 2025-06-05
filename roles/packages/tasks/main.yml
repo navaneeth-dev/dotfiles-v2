@@ -7,9 +7,7 @@
 - name: Install packages
   ansible.builtin.package:
     name:
-      - go-task
       - fzf
-      - go-task
       - fuse2
       - restic
       - go
@@ -60,10 +58,19 @@
     upgrade_all: true
 
 - become: false
+  community.general.homebrew_tap:
+    name:
+      - go-task/tap
+      - hashicorp/tap
+    state: present
+
+- become: false
   community.general.homebrew:
     name:
-      - kubectl
-      - helm
+    - kubectl
+    - helm
+    - go-task/tap/go-task
+    - hashicorp/tap/terraform
     state: present
 
 - name: Install flatpaks
