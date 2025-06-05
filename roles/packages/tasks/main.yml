@@ -131,6 +131,7 @@
   - "/home/{{ ansible_user_id }}/personal"
   - "/home/{{ ansible_user_id }}/work"
   - "/home/{{ ansible_user_id }}/Re"
+  - "/home/{{ ansible_user_id }}/.kube"
   ansible.builtin.file:
     path: "{{ item }}"
     state: directory
