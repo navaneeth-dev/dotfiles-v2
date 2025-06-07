@@ -78,6 +78,7 @@
 - name: Install flatpaks
   community.general.flatpak:
     name:
+      - com.github.iwalton3.jellyfin-media-player
       - tv.kodi.Kodi
       - dev.vencord.Vesktop
       - org.localsend.localsend_app
