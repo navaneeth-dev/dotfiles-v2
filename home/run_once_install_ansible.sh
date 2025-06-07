@@ -11,3 +11,5 @@ pipx install --include-deps frida-tools
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 curl https://get.volta.sh | bash -s -- --skip-setup
+
+curl -fsSL https://get.pulumi.com | sh
