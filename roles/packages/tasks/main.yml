@@ -78,6 +78,7 @@
 - name: Install flatpaks
   community.general.flatpak:
     name:
+      - tv.kodi.Kodi
       - dev.vencord.Vesktop
       - org.localsend.localsend_app
       - org.mozilla.Thunderbird
