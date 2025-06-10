@@ -48,6 +48,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - ventoy-bin
       - google-chrome
       - librewolf-bin
       - infisical-bin
