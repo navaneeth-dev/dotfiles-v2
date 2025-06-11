@@ -8,6 +8,8 @@
   ansible.builtin.package:
     name:
       - gimp
+      - bluez
+      - bluez-utils
       - libreoffice-still
       - fzf
       - fuse2
@@ -125,9 +127,12 @@
 
 - name: Start and enable systemd services
   become: true
+  loop:
+  - libvirtd.socket
+  - bluetooth.service
   ansible.builtin.systemd_service:
     state: started
-    name: libvirtd.socket
+    name: "{{ item }}"
     enabled: true
     scope: system
 
