@@ -81,6 +81,7 @@
     - helm
     - go-task/tap/go-task
     - hashicorp/tap/terraform
+    - hashicorp/tap/packer
     state: present
 
 - name: Install flatpaks
