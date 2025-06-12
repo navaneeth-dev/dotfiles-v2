@@ -78,6 +78,7 @@
   community.general.homebrew:
     name:
     - oci-cli
+    - butane
     - kubectl
     - helm
     - go-task/tap/go-task
