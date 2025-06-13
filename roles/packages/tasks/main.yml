@@ -72,6 +72,7 @@
     name:
       - go-task/tap
       - hashicorp/tap
+      - derailed/k9s
     state: present
 
 - become: false
@@ -84,6 +85,7 @@
     - go-task/tap/go-task
     - hashicorp/tap/terraform
     - hashicorp/tap/packer
+    - derailed/k9s/k9s
     state: present
 
 - name: Install flatpaks
