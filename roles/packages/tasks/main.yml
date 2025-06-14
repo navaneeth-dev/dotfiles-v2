@@ -73,6 +73,7 @@
       - go-task/tap
       - hashicorp/tap
       - derailed/k9s
+      - siderolabs/tap
     state: present
 
 - become: false
@@ -86,6 +87,7 @@
     - hashicorp/tap/terraform
     - hashicorp/tap/packer
     - derailed/k9s/k9s
+    - siderolabs/tap/talosctl
     state: present
 
 - name: Install flatpaks
