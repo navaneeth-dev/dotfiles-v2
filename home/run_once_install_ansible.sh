@@ -13,3 +13,5 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 curl https://get.volta.sh | bash -s -- --skip-setup
 
 curl -fsSL https://get.pulumi.com | sh
+
+/bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
