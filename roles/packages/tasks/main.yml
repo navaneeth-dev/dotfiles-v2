@@ -8,6 +8,7 @@
   ansible.builtin.package:
     name:
       - docker
+      - docker-compose
       - drawio-desktop
       - gimp
       - podman
