@@ -7,6 +7,7 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - docker
       - drawio-desktop
       - gimp
       - podman
@@ -109,13 +110,6 @@
       - org.telegram.desktop
     state: present
 
-- name: Change user shell to zsh
-  become: true
-  become_user: "{{ ansible_user_id }}"
-  user:
-    name: "{{ ansible_user_id }}"
-    shell: /usr/bin/zsh
-
 - name: Start and enable systemd user services
   become: true
   become_user: "{{ ansible_user_id }}"
@@ -143,11 +137,20 @@
   loop:
   - libvirtd.socket
   - bluetooth.service
+  - docker.socket
   ansible.builtin.systemd_service:
     state: started
     name: "{{ item }}"
     enabled: true
     scope: system
+
+- name: Change shell & Add user to docker group
+  become: true
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    shell: /usr/bin/zsh
+    append: yes
 
 - name: Create dev directories
   loop:
