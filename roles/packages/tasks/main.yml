@@ -10,6 +10,7 @@
       - act
       - docker
       - docker-compose
+      - docker-buildx
       - drawio-desktop
       - gimp
       - podman
