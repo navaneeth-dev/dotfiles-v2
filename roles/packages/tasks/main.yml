@@ -8,6 +8,7 @@
   ansible.builtin.package:
     name:
       - act
+      - jq
       - docker
       - docker-compose
       - docker-buildx
