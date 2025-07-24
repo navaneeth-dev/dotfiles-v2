@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo pacman -Syu
-sudo pacman -S python-pipx
+sudo pacman -S --noconfirm python-pipx
 pipx ensurepath
 sudo pipx ensurepath --global
 
