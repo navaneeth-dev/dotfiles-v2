@@ -95,3 +95,9 @@ complete -o nospace -C /usr/bin/terraform terraform
 
 zstyle ':completion:*:*:git:*' script /usr/share/bash-completion/bash_completion
 
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/rize/.pulumi/bin
+export PATH="/home/rize/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/rize/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
