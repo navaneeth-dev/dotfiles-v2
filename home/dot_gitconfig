@@ -1,14 +1,12 @@
 [user]
 	name = Navaneeth
 	email = 32010211+navaneeth-dev@users.noreply.github.com
-	signingkey = /home/rize/.ssh/new_primary_ed25519.pub
-
-[gpg]
-	format = ssh
+	signingkey = D0A974A2464340B4
 
 [commit]
 	gpgsign = true
 [tag]
-	gpgsign = true
+	gpgSign = true
 [format]
 	signoff = true
+
