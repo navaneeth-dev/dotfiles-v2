@@ -99,3 +99,13 @@ zstyle ':completion:*:*:git:*' script /usr/share/bash-completion/bash_completion
 # add Pulumi to the PATH
 export PATH=$PATH:/home/rize/.pulumi/bin
 
+# Google Cloud SDK configuration
+# Add gcloud tools to PATH
+if [ -f '/home/rize/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then 
+    source '/home/rize/.gcloud/google-cloud-sdk/path.zsh.inc'
+fi
+
+# Enable gcloud command completion
+if [ -f '/home/rize/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then 
+    source '/home/rize/.gcloud/google-cloud-sdk/completion.zsh.inc'
+fi
