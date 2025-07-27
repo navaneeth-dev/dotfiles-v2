@@ -109,3 +109,6 @@ fi
 if [ -f '/home/rize/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then 
     source '/home/rize/.gcloud/google-cloud-sdk/completion.zsh.inc'
 fi
+
+export PATH="/home/rize/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/rize/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
