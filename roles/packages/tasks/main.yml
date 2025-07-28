@@ -93,6 +93,7 @@
     - oci-cli
     - butane
     - kubectl
+    - kubectx
     - helm
     - go-task/tap/go-task
     - hashicorp/tap/terraform
