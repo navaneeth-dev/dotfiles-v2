@@ -82,11 +82,13 @@
       - hashicorp/tap
       - derailed/k9s
       - siderolabs/tap
+      - fluxcd/tap
     state: present
 
 - become: false
   community.general.homebrew:
     name:
+    - fluxcd/tap/flux
     - podman-compose
     - oci-cli
     - butane
