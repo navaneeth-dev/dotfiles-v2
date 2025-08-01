@@ -89,6 +89,7 @@
 - become: false
   community.general.homebrew:
     name:
+    - gh
     - fluxcd/tap/flux
     - podman-compose
     - oci-cli
