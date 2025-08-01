@@ -112,3 +112,4 @@ fi
 
 export PATH="/home/rize/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/rize/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+eval "$(mise activate zsh)"
