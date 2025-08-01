@@ -66,6 +66,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - visual-studio-code-bin
       - ventoy-bin
       - google-chrome
       - librewolf-bin
