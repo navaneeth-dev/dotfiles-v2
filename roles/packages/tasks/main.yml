@@ -67,6 +67,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - slack-desktop
       - visual-studio-code-bin
       - ventoy-bin
       - google-chrome
