@@ -1,3 +1,7 @@
+Host nas
+    Hostname nas.home.arpa
+    User ubuntu
+
 Host *
     AddKeysToAgent yes
     IdentityFIle ~/.ssh/new_primary_ed25519
