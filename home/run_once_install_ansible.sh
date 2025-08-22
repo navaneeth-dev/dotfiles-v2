@@ -7,5 +7,3 @@ sudo pipx ensurepath --global
 
 pipx install --include-deps ansible ansible-dev-tools
 pipx install --include-deps frida-tools
-
-pipx install --include-deps instaloader
