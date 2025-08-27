@@ -7,6 +7,8 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - aria2
+      - zerotier-one
       - element-desktop
       - yt-dlp
       - nmap
