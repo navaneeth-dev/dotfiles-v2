@@ -100,6 +100,7 @@
 - become: false
   community.general.homebrew:
     name:
+    - k6
     - gh
     - fluxcd/tap/flux
     - podman-compose
