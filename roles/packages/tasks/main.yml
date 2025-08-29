@@ -7,6 +7,7 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - ethtool
       - aria2
       - zerotier-one
       - element-desktop
