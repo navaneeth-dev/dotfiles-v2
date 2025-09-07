@@ -7,6 +7,7 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - tlp
       - man-db
       - man-pages
       - ethtool
@@ -165,6 +166,7 @@
   - libvirtd.socket
   - bluetooth.service
   - docker.socket
+  - tlp.service
   ansible.builtin.systemd_service:
     state: started
     name: "{{ item }}"
