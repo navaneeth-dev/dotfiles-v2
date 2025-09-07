@@ -2,6 +2,14 @@ Host nas
     Hostname nas.home.arpa
     User ubuntu
 
+Host openwrt
+    Hostname openwrt.home.arpa
+    User root
+
+Host ap
+    Hostname ap.home.arpa
+    User root
+
 Host *
     AddKeysToAgent yes
     IdentityFIle ~/.ssh/new_primary_ed25519
