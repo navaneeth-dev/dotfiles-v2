@@ -113,6 +113,7 @@
 - become: false
   community.general.homebrew:
     name:
+    - siderolabs/tap/sidero-tools
     - k6
     - gh
     - fluxcd/tap/flux
