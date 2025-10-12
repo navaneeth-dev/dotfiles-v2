@@ -1,6 +1,6 @@
 [user]
 	name = Navaneeth
-	email = 32010211+navaneeth-dev@users.noreply.github.com
+	email = me@rizexor.com
 	signingkey = D0A974A2464340B4
 
 [commit]
@@ -10,3 +10,5 @@
 [format]
 	signoff = true
 
+[status]
+	submoduleSummary = true
