@@ -115,6 +115,7 @@
 - become: false
   community.general.homebrew:
     name:
+    - valero
     - siderolabs/tap/sidero-tools
     - k6
     - gh
