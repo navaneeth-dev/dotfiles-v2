@@ -21,7 +21,6 @@ zinit snippet OMZP::kubectx
 
 # Load tools to path
 eval "$(starship init zsh)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Tool paths
 export EDITOR=nvim
@@ -118,3 +117,7 @@ alias butane='podman run --rm --interactive         \
               --security-opt label=disable          \
               --volume "${PWD}:/pwd" --workdir /pwd \
               quay.io/coreos/butane:release'
+
+alias bat="bat --color=always -p"
+
+complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/1.13.4/bin/terraform terraform
