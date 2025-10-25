@@ -7,6 +7,7 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - terraform
       - qbittorrent
       - pv
       - pipewire
@@ -115,7 +116,7 @@
 - become: false
   community.general.homebrew:
     name:
-    - velero
+    - kubectl-cnpg
     - siderolabs/tap/sidero-tools
     - k6
     - gh
@@ -127,7 +128,6 @@
     - kubectx
     - helm
     - go-task/tap/go-task
-    - hashicorp/tap/terraform
     - hashicorp/tap/packer
     - derailed/k9s/k9s
     - siderolabs/tap/talosctl
