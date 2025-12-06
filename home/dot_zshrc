@@ -121,3 +121,4 @@ alias butane='podman run --rm --interactive         \
 alias bat="bat --color=always -p"
 
 complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/1.13.4/bin/terraform terraform
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
