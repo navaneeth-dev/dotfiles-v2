@@ -108,6 +108,7 @@
 - become: false
   community.general.homebrew_tap:
     name:
+      - utkuozdemir/pv-migrate
       - go-task/tap
       - hashicorp/tap
       - derailed/k9s
@@ -118,6 +119,7 @@
 - become: false
   community.general.homebrew:
     name:
+    - pv-migrate
     - kubectl-cnpg
     - siderolabs/tap/sidero-tools
     - k6
