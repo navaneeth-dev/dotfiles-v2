@@ -7,6 +7,8 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - cups
+      - cups-pdf
       - gvfs-smb
       - smbclient
       - networkmanager-openvpn
@@ -187,6 +189,7 @@
   - bluetooth.service
   - docker.socket
   - tlp.service
+  - cups.service
   ansible.builtin.systemd_service:
     state: started
     name: "{{ item }}"
