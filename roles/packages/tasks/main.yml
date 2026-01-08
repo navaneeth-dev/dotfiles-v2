@@ -7,6 +7,8 @@
 - name: Install packages
   ansible.builtin.package:
     name:
+      - xdg-desktop-portal
+      - flatpak
       - cups
       - cups-pdf
       - gvfs-smb
@@ -213,3 +215,4 @@
   ansible.builtin.file:
     path: "{{ item }}"
     state: directory
+
