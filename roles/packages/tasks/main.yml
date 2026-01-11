@@ -192,6 +192,7 @@
 - name: Start and enable systemd services
   become: true
   loop:
+  - sssd.service
   - libvirtd.socket
   - bluetooth.service
   - docker.socket
