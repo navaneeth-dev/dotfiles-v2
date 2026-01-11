@@ -103,6 +103,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - realmd
       - slack-desktop
       - visual-studio-code-bin
       - ventoy-bin
