@@ -85,6 +85,7 @@ zinit cdreplay -q
 
 source <(helm completion zsh)
 source <(kubectl completion zsh)
+source <(fzf --zsh)
 
 eval "$(zoxide init zsh --cmd cd)"
 
