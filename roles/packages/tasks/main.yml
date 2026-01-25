@@ -104,6 +104,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - rustdesk
       - realmd
       - slack-desktop
       - visual-studio-code-bin
