@@ -105,6 +105,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - barman
       - realmd
       - slack-desktop
       - visual-studio-code-bin
