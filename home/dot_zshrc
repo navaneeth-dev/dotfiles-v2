@@ -121,4 +121,4 @@ alias butane='podman run --rm --interactive         \
               quay.io/coreos/butane:release'
 
 alias bat="bat --color=always -p"
-
+alias t="talosctl"
