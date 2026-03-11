@@ -47,7 +47,6 @@
       - bind
       - fd
       - mise
-      - yq
       - pre-commit
       - httpie
       - act
@@ -138,6 +137,7 @@
     - kubectl-cnpg
     - siderolabs/tap/sidero-tools
     - k6
+    - yq
     - gh
     - fluxcd/tap/flux
     - podman-compose
