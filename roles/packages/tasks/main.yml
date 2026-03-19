@@ -109,7 +109,7 @@
       - visual-studio-code-bin
       - ventoy-bin
       - google-chrome
-      - librewolf-bin
+      #- librewolf-bin
       - infisical-bin
 
 - name: Update homebrew and upgrade all packages
@@ -121,7 +121,7 @@
 - become: false
   community.general.homebrew_tap:
     name:
-      - utkuozdemir/pv-migrate
+      #- utkuozdemir/pv-migrate
       - go-task/tap
       - hashicorp/tap
       - derailed/k9s
@@ -133,7 +133,7 @@
   community.general.homebrew:
     name:
     - kubelogin
-    - pv-migrate
+    #- pv-migrate
     - kubectl-cnpg
     - siderolabs/tap/sidero-tools
     - k6
@@ -194,11 +194,11 @@
 - name: Start and enable systemd services
   become: true
   loop:
-  - sssd.service
+  #- sssd.service
   - libvirtd.socket
   - bluetooth.service
   - docker.socket
-  - tlp.service
+  #- tlp.service
   - cups.service
   ansible.builtin.systemd_service:
     state: started
