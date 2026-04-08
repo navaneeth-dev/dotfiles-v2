@@ -10,7 +10,6 @@
       - nushell
       - brightnessctl
       - audacity
-      - sssd
       - gnome
       - gnome-control-center
       - xdg-desktop-portal
