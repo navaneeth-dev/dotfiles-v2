@@ -33,7 +33,6 @@
       - openresolv
       - wireguard-tools
       - ntfs-3g
-      - tlp
       - man-db
       - man-pages
       - ethtool
@@ -198,7 +197,6 @@
   - libvirtd.socket
   - bluetooth.service
   - docker.socket
-  #- tlp.service
   - cups.service
   ansible.builtin.systemd_service:
     state: started
