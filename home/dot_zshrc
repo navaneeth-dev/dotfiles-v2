@@ -80,6 +80,7 @@ setopt hist_find_no_dups
 alias ls="exa --icons"
 
 # Load completions
+fpath=(~/.zsh/completions $fpath)
 zicompinit
 zinit cdreplay -q
 
@@ -114,6 +115,7 @@ fi
 export PATH="/home/rize/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/rize/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 eval "$(mise activate zsh)"
+eval "$(mise completion zsh)"
 
 alias butane='podman run --rm --interactive         \
               --security-opt label=disable          \
