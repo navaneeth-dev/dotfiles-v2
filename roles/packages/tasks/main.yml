@@ -103,6 +103,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - cursor-bin
       - opencode
       - slack-desktop
       - visual-studio-code-bin
