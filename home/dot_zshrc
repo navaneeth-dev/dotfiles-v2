@@ -44,6 +44,7 @@ bindkey "^[[3~" delete-char
 
 function zvm_after_init() {
     bindkey -M viins -s '^F' "tmux-sessionizer^M"
+    eval "$(atuin init zsh)"
 }
 
 my-backward-delete-word() {
@@ -124,3 +125,6 @@ alias butane='podman run --rm --interactive         \
 
 alias bat="bat --color=always -p"
 alias t="talosctl"
+
+. "$HOME/.atuin/bin/env"
+
